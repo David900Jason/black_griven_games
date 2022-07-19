@@ -1,10 +1,4 @@
-$red: pink;
-
-body {
-  background-color: $red;
-}
-
-h1 {
-  font-family: Tahoma;
-  font-size: 20px;
-}
+@forward './abstracts/index';
+@forward './globals/index';
+@forward './components/index';
+@forward './layout/index';
