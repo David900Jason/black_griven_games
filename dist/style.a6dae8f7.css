@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Basic&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;300;400;500;600;700&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -47,6 +48,7 @@ html {
   --fw-light: 200;
   --ff-primary: "Poppins";
   --ff-accent: "Basic";
+  --ff-arabic: "IBM Plex Sans Arabic";
   font-size: 62.5%;
 }
 
@@ -123,34 +125,17 @@ a {
 
 .container {
   margin-inline: auto;
-}
-@media (min-width: 56.7em) {
-  .container {
-    width: 98%;
-  }
-}
-@media (min-width: 76.8em) {
-  .container {
-    width: 95%;
-  }
-}
-@media (min-width: 99.2em) {
-  .container {
-    width: 90%;
-  }
-}
-@media (min-width: 120em) {
-  .container {
-    width: 85%;
-  }
+  width: min(95vw, 150em);
 }
 
 .section-title {
   display: block;
   text-align: center;
+  margin-bottom: 8rem;
   font-size: var(--fs-150);
+  font-family: var(--ff-primary);
   -webkit-text-stroke-width: 4px;
-  letter-spacing: -8px;
+  letter-spacing: -4px;
   color: transparent;
   position: relative;
   top: auto;
@@ -180,6 +165,7 @@ a {
   color: #000;
   background-color: var(--clr-accent-100);
   cursor: pointer;
+  transition: var(--trs-duration-f);
 }
 .btn:active {
   transform: scale(0.95);
@@ -220,6 +206,112 @@ a {
   clip-path: polygon(10% 0%, 85% 50%, 10% 100%);
   margin-left: 10px;
   transition: transform var(--trs-duration-s);
+}
+
+/* _________________________ Navbar _________________________ */
+.nav {
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+}
+.nav__logo {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+}
+.nav__logo img {
+  width: 8em;
+  height: 8em;
+  margin-right: 1em;
+}
+.nav__logo a {
+  font-size: var(--fs-700);
+  font-family: var(--ff-accent);
+  color: var(--clr-secondary-100);
+  letter-spacing: -0.3rem;
+  text-transform: uppercase;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--clr-secondary-100);
+}
+.nav__links {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.nav__links a {
+  margin-inline-start: 2em;
+  line-height: 10rem;
+  font-size: var(--fs-100);
+  font-family: var(--ff-accent);
+  text-transform: uppercase;
+  color: var(--clr-secondary-100);
+}
+.nav__links a:hover {
+  text-decoration: underline;
+}
+
+/* _________________________ Hero Section _________________________ */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/hero.715e454f.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: linear-gradient(45deg, #381F15, #802500);
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background-color: hsla(17deg, 25%, 19%, 0.5);
+}
+.hero__image {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background-image: url("/users.ca6b082b.png");
+  background-size: 110% 640px;
+  background-repeat: no-repeat;
+  background-position: 95% 100%;
+}
+.hero__text {
+  position: absolute;
+  z-index: 3;
+  inset: 25% auto auto 50%;
+  transform: translateX(-50%);
+  font-family: var(--ff-arabic, sans-serif);
+  font-size: var(--fs-1000);
+  text-align: center;
+  color: var(--clr-accent-100);
+}
+.hero__text h1 {
+  font-family: inherit;
+  font-size: 10rem;
+  font-weight: var(--fw-extr-bold);
+  -webkit-text-stroke: 2px var(--clr-accent-100);
+}
+.hero__text h1:nth-child(2) {
+  margin-top: -0.5em;
+}
+.hero__text button {
+  font-family: inherit;
 }
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */
