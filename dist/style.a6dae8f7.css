@@ -1,41 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Basic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.section--padding {
+  padding-block-start: 10em;
+  padding-block-end: 10em;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 :root {
-  --clr-orangered-100: hsl(18deg, 100%, 51%);
-  --clr-orangered-200: hsl(18deg, 100%, 56%);
-  --clr-orangered-300: hsl(18deg, 100%, 61%);
-  --clr-orangered-400: hsl(18deg, 100%, 66%);
-  --clr-orangered-500: hsl(18deg, 100%, 71%);
-  --clr-orange-100: hsl(32deg, 100%, 51%);
-  --clr-orange-200: hsl(32deg, 100%, 56%);
-  --clr-orange-300: hsl(32deg, 100%, 61%);
-  --clr-orange-400: hsl(32deg, 100%, 66%);
-  --clr-orange-500: hsl(32deg, 100%, 71%);
-  --clr-yellow-100: hsl(48deg, 100%, 53%);
-  --clr-yellow-200: hsl(48deg, 100%, 58%);
-  --clr-yellow-300: hsl(48deg, 100%, 63%);
-  --clr-yellow-400: hsl(48deg, 100%, 68%);
-  --clr-yellow-500: hsl(48deg, 100%, 73%);
-  --clr-lightorange-100: hsl(40deg, 100%, 65%);
-  --clr-lightorange-200: hsl(40deg, 100%, 70%);
-  --clr-lightorange-300: hsl(40deg, 100%, 75%);
-  --clr-lightorange-400: hsl(40deg, 100%, 80%);
-  --clr-lightorange-500: hsl(40deg, 100%, 85%);
-  --clr-brown-100: hsl(17deg, 45%, 20%);
-  --clr-brown-200: hsl(17deg, 45%, 25%);
-  --clr-brown-300: hsl(17deg, 45%, 30%);
-  --clr-brown-400: hsl(17deg, 45%, 35%);
-  --clr-brown-500: hsl(17deg, 45%, 40%);
-  --clr-darkbrown-100: hsl(19deg, 46%, 8%);
-  --clr-darkbrown-200: hsl(19deg, 46%, 13%);
-  --clr-darkbrown-300: hsl(19deg, 46%, 18%);
-  --clr-darkbrown-400: hsl(19deg, 46%, 23%);
-  --clr-darkbrown-500: hsl(19deg, 46%, 28%);
+  --clr-orangelight-100: hsl(18deg, 100%, 51%);
+  --clr-orangelight-200: hsl(18deg, 100%, 56%);
+  --clr-orangelight-300: hsl(18deg, 100%, 61%);
+  --clr-orangelight-400: hsl(18deg, 100%, 66%);
+  --clr-orangelight-500: hsl(18deg, 100%, 71%);
+  --clr-orangedark-100: hsl(32deg, 100%, 51%);
+  --clr-orangedark-200: hsl(32deg, 100%, 56%);
+  --clr-orangedark-300: hsl(32deg, 100%, 61%);
+  --clr-orangedark-400: hsl(32deg, 100%, 66%);
+  --clr-orangedark-500: hsl(32deg, 100%, 71%);
+  --clr-yellowlight-100: hsl(48deg, 100%, 53%);
+  --clr-yellowlight-200: hsl(48deg, 100%, 58%);
+  --clr-yellowlight-300: hsl(48deg, 100%, 63%);
+  --clr-yellowlight-400: hsl(48deg, 100%, 68%);
+  --clr-yellowlight-500: hsl(48deg, 100%, 73%);
+  --clr-yellowdark-100: hsl(40deg, 100%, 65%);
+  --clr-yellowdark-200: hsl(40deg, 100%, 70%);
+  --clr-yellowdark-300: hsl(40deg, 100%, 75%);
+  --clr-yellowdark-400: hsl(40deg, 100%, 80%);
+  --clr-yellowdark-500: hsl(40deg, 100%, 85%);
+  --clr-brownlight-100: hsl(17deg, 45%, 20%);
+  --clr-brownlight-200: hsl(17deg, 45%, 25%);
+  --clr-brownlight-300: hsl(17deg, 45%, 30%);
+  --clr-brownlight-400: hsl(17deg, 45%, 35%);
+  --clr-brownlight-500: hsl(17deg, 45%, 40%);
+  --clr-browndark-100: hsl(19deg, 46%, 8%);
+  --clr-browndark-200: hsl(19deg, 46%, 13%);
+  --clr-browndark-300: hsl(19deg, 46%, 18%);
+  --clr-browndark-400: hsl(19deg, 46%, 23%);
+  --clr-browndark-500: hsl(19deg, 46%, 28%);
   --fs-100: 1.4rem;
   --fs-150: 12rem;
   --fs-200: 1.6rem;
@@ -58,8 +63,8 @@ html {
   --fw-regular: 400;
   --fw-light: 200;
   --ff-primary: "Poppins", sans-serif;
-  --ff-accent: "Basic", sans-serif;
-  --ff-arabic: "Montserrat", sans-serif;
+  --ff-secondary: "Montserrat", sans-serif;
+  --ff-navbar: "Basic", sans-serif;
   font-size: 62.5%;
 }
 
@@ -68,6 +73,10 @@ html {
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+* {
+  font: inherit;
 }
 
 /* Remove default margin */
@@ -82,6 +91,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  color: initial;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -100,6 +110,10 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  font-family: var(--ff-primary);
+  background-color: var(--clr-browndark-100);
+  display: grid;
+  place-items: center;
 }
 
 /* A elements that don't have a class get default styles */
@@ -135,6 +149,92 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+/* Font Size Resets */
+h1 {
+  font-size: var(--fs-1000);
+}
+
+h2 {
+  font-size: var(--fs-800);
+}
+
+h3 {
+  font-size: var(--fs-600);
+}
+
+h1, h2, h3 {
+  font-weight: var(--fw-extr-bold);
+}
+
+p {
+  font-size: var(--fs-300);
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: initial;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(95%, 142em);
+  margin-inline: auto;
+}
+
+.section__title {
+  font-size: 120px;
+  position: absolute;
+  top: 35px;
+  text-transform: uppercase;
+  letter-spacing: 30px;
+  right: 35px;
+  font-family: var(--ff-secondary);
+  opacity: 0.28;
+  color: #fff;
+}
+.section__title::after {
+  all: unset;
+  content: "Lorem Ipsum Dolore sit amit";
+  position: absolute;
+  bottom: 1px;
+  left: 130px;
+  font-size: var(--fs-200);
+  letter-spacing: 2px;
+  opacity: 1;
+  z-index: 50;
+}
+button {
+  font-size: 2.4rem;
+  padding: 0.5em 0.8em;
+  background-color: var(--clr-yellowlight-400);
+  outline: 1px solid var(--clr-browndark-100);
+  border-radius: 0.25em;
+  color: var(--clr-browndark-100);
+  font-weight: var(--fw-norm-bold);
+  display: block;
+  border: none;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+button:active {
+  transform: scale(0.95);
+}
+
+.glass {
+  width: 250px;
+  height: 250px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.08));
+  padding: 3em;
+  border-radius: 3em;
+  filter: blur(2px);
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+  z-index: 1;
 }
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */
