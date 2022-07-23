@@ -6,6 +6,12 @@
   padding-block-end: 10em;
 }
 
+.section--fluid {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -59,7 +65,7 @@ html {
   --trs-color-200: #eee;
   --trs-color-300: #ddd;
   --fw-extr-bold: 900;
-  --fw-norm-bold: 700;
+  --fw-bold: 700;
   --fw-regular: 400;
   --fw-light: 200;
   --ff-primary: "Poppins", sans-serif;
@@ -111,9 +117,6 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   font-family: var(--ff-primary);
-  background-color: var(--clr-browndark-100);
-  display: grid;
-  place-items: center;
 }
 
 /* A elements that don't have a class get default styles */
@@ -198,7 +201,7 @@ a:hover {
 }
 .section__title::after {
   all: unset;
-  content: "Lorem Ipsum Dolore sit amit";
+  content: attr(data-title);
   position: absolute;
   bottom: 1px;
   left: 130px;
@@ -235,6 +238,167 @@ button:active {
   background-clip: padding-box;
   box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
   z-index: 1;
+}
+
+.video-play {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: black;
+  display: grid;
+  place-items: center;
+}
+.video-play i {
+  display: block;
+  font-size: 7rem;
+  color: white;
+  width: 100%;
+  text-align: center;
+  line-height: 15rem;
+  margin-left: 1.5rem;
+  -webkit-text-stroke: 8px #000;
+}
+
+header {
+  height: 100vh;
+  background-image: url("/hero.715e454f.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(90deg, #381F15, #802500);
+}
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-color: hsla(17deg, 25%, 19%, 0.8);
+}
+header .nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-inline: 6em;
+  line-height: 12em;
+  font-family: var(--ff-navbar);
+  z-index: 99;
+  width: 100%;
+  position: absolute;
+  inset: 0 auto auto 0;
+}
+header .nav__logo {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 1.5em;
+}
+header .nav__logo__img {
+  width: 8em;
+  height: 8em;
+}
+header .nav__logo__link {
+  font-size: var(--fs-700);
+  font-weight: var(--fw-regular);
+  color: var(--clr-orangedark-100);
+  text-transform: uppercase;
+  letter-spacing: -4px;
+}
+header .nav__links {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 3em;
+}
+header .nav__links__link {
+  color: var(--clr-orangedark-100);
+  font-weight: var(--fw-bold);
+  text-transform: uppercase;
+}
+header .hero {
+  height: 100vh;
+  width: 100vw;
+  z-index: 3;
+  position: absolute;
+  inset: 0 auto auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/users.ca6b082b.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  background-size: calc(100% + 135px);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+header .hero__intro-text {
+  color: var(--clr-yellowlight-100);
+  margin-top: -150px;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-extr-bold);
+  font-size: 7em;
+}
+header .hero__brand-name {
+  margin-top: -2.5rem;
+  color: hsla(48deg, 100%, 53%, 0.5);
+  letter-spacing: -8px;
+  -webkit-text-stroke: 6px #E6B70F;
+  font-weight: var(--fw-extr-bold);
+  font-size: var(--fs-150);
+}
+
+.about {
+  background-color: var(--clr-browndark-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about__card {
+  width: max-content;
+  height: auto;
+  margin-block-start: 200px;
+  margin-inline: auto;
+  padding: 80px 40px;
+  border-radius: 40px;
+  background-color: var(--clr-orangedark-100);
+  opacity: 0.8;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  grid-row-gap: 40px;
+  flex-direction: column;
+}
+.about__card__info, .about__card__subscribe {
+  display: block;
+  width: 600px;
+}
+.about__card__img {
+  position: absolute;
+  top: -82.5px;
+  left: -82.5px;
+  z-index: 1;
+  width: 165px;
+  height: 165px;
+  border: 15px solid var(--clr-orangedark-100);
+  border-radius: 50%;
+}
+.about__card__video {
+  position: absolute;
+  right: -75px;
+  bottom: -75px;
+  z-index: 1;
+  background-color: var(--clr-orangelight-100);
+}
+.about__card__video i {
+  color: var(--clr-orangelight-300);
 }
 
 /*# sourceMappingURL=/style.a6dae8f7.css.map */
