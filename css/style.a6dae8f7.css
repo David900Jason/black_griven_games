@@ -271,7 +271,7 @@ label {
 header {
   height: 100vh;
   overflow: hidden;
-  background-image: url("/header_banner.1dd0751d.jpg");
+  background-image: url("../images/header_banner.1dd0751d.jpg");
   background-size: cover;
   position: relative;
 }
@@ -367,7 +367,7 @@ header .hero__intro-text h1:last-child {
 }
 
 .about {
-  background-image: url("/about_banner.20fbf973.jpg");
+  background-image: url("../images/about_banner.20fbf973.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -397,7 +397,7 @@ header .hero__intro-text h1:last-child {
   right: 3%;
   width: 75rem;
   height: 60rem;
-  background-image: url("/SVG Image.b0565dec.png");
+  background-image: url("../images/SVG Image.b0565dec.png");
 }
 .about .container > * {
   margin-bottom: 4rem;
@@ -426,7 +426,7 @@ header .hero__intro-text h1:last-child {
 }
 
 .partners {
-  background-image: url("/partners_banner.14481f1b.png");
+  background-image: url("../images/partners_banner.14481f1b.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -562,7 +562,7 @@ header .hero__intro-text h1:last-child {
 }
 
 .contact {
-  background-image: url("/mountains.fb54dcf6.jpg");
+  background-image: url("../images/mountains.fb54dcf6.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -696,7 +696,7 @@ header .hero__intro-text h1:last-child {
 
 .site-map {
   max-height: 600px;
-  background-image: url("/warrior.13ce8c27.png");
+  background-image: url("../images/warrior.13ce8c27.png");
   background-size: cover;
   position: relative;
 }
